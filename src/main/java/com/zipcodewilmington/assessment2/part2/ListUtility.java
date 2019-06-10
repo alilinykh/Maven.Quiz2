@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class ListUtility {
-    private ArrayList<Integer> arr = new ArrayList<>(1);
+    private ArrayList <Integer> arr = new ArrayList<>(1);
 
 
     public Boolean add(int i) {
@@ -19,12 +19,9 @@ public class ListUtility {
     }
 
     public List<Integer> getUnique() {
+        ArrayList<Integer> result = new ArrayList<>(1);
 
-        for (int i = 0; i <arr.size() ; i++) {
-            for (int j = 0; j < arr.size(); j++) {
-            }
-        }
-        return arr;
+        return result;
     }
 
     public String join() {
@@ -33,6 +30,10 @@ public class ListUtility {
     }
 
     public Integer mostCommon() {
+        int numOc = 0;
+
+
+
 
         return null;
     }

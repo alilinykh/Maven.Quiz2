@@ -3,12 +3,17 @@ package com.zipcodewilmington.assessment2.part1;
 
 
 public class IntegerArrayUtilities {
+
     public Boolean hasEvenLength(Integer[] array) {
         return array.length % 2 == 0;
     }
 
     public Integer[] range(int start, int stop) {
-        Integer[] result = new Integer[stop-start];
+        Integer[] result = new Integer[stop - start + 1];
+        for (int i = 0; i < result.length ; i++) {
+            result [i] = start + i;
+
+        }
         return  result;
     }
 
