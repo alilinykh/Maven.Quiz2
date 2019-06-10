@@ -10,8 +10,7 @@ public class ListUtility {
     private ArrayList <String> strings = new ArrayList<>(1);
 
 
-
-    public Boolean add(int i) {
+    public Boolean add(Integer i) {
         arr.add(i);
         return arr.contains(i);
     }
@@ -30,7 +29,7 @@ public class ListUtility {
         StringBuilder stringBuilder = new StringBuilder();
         for (Integer i : arr
              ) {
-        stringBuilder.append(i);
+        stringBuilder.append(", " + i);
         }
 
         return stringBuilder.toString();
