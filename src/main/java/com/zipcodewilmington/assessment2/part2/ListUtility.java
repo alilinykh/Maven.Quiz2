@@ -7,6 +7,8 @@ import java.util.List;
 
 public class ListUtility {
     private ArrayList <Integer> arr = new ArrayList<>(1);
+    private ArrayList <String> strings = new ArrayList<>(1);
+
 
 
     public Boolean add(int i) {
@@ -25,14 +27,25 @@ public class ListUtility {
     }
 
     public String join() {
+        StringBuilder stringBuilder = new StringBuilder();
+        for (Integer i : arr
+             ) {
+        stringBuilder.append(i);
+        }
 
-        return null;
+        return stringBuilder.toString();
     }
 
     public Integer mostCommon() {
         int numOc = 0;
+        Integer most = arr.get(0);
+        for (int i = 0; i < arr.size() ; i++) {
+            for (int j = 0; j < arr.size() ; j++) {
+                if (arr.get(i).equals(arr.get(j))) {
 
-
+                }
+            }
+        }
 
 
         return null;
