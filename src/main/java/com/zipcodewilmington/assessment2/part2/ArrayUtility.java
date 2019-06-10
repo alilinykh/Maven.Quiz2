@@ -1,19 +1,65 @@
 package com.zipcodewilmington.assessment2.part2;
 
+import com.j256.ormlite.stmt.query.In;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class ArrayUtility {
     public Integer[] merge(Integer[] array1, Integer[] array2) {
-        return null;
+        Integer[] result = new Integer[array1.length + array2.length];
+        int counter = 0;
+        for (int i = 0; i < array1.length; i++) {
+            result [counter] = array1[i];
+            counter++;
+        }
+        for (int i = 0; i < array2.length; i++) {
+            result [counter] = array2[i];
+            counter++;
+        }
+        return result;
     }
 
     public Integer[] rotate(Integer[] array, Integer index) {
-        return null;
+
+        for (int i = 0; i < index; i++) {
+            for (int j = 0; j < array.length-1; j++) {
+                int temp;
+                temp = array[0];
+                array[i] =array[i + 1];
+                array[i] = temp;
+            }
+
+        }
+
+        return array;
     }
 
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
-        return null;
+        Integer result = 0;
+        Integer[] merged = merge(array1,array2);
+        for (Integer i: merged
+             ) {
+            if(i.equals(valueToEvaluate)) {
+                result++;
+            }
+        }
+        return result;
     }
 
     public Integer mostCommon(Integer[] array) {
-        return null;
+        Integer mostCommon = 0;
+        Integer result = 0;
+        Integer temp;
+        Integer[] second = {999999999};
+        for (Integer i : array
+             ) {
+            temp =countOccurrence(array, second,i);
+            if ( temp > mostCommon) {
+                mostCommon = temp;
+                result = i;
+            }
+        }
+        return result;
     }
 }
