@@ -35,6 +35,7 @@ public class ListUtility {
 
     public Integer mostCommon() {
         Integer[] newArr = new Integer[arr.size()];
+        newArr = arr.toArray(newArr);
 
         ArrayUtility arrayUtility = new ArrayUtility();
 

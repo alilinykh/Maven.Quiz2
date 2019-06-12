@@ -40,7 +40,8 @@ public class ArrayUtility {
         Integer[] merged = merge(array1,array2);
         for (Integer i: merged
              ) {
-            if(i.equals(valueToEvaluate)) {
+            if(i == null) {result = null;}
+            else if(i.equals(valueToEvaluate)) {
                 result++;
             }
         }
@@ -54,6 +55,7 @@ public class ArrayUtility {
         Integer[] second = {999999999};
         for (Integer i : array
              ) {
+            if (i == null) {result = null; break;}
             temp =countOccurrence(array, second,i);
             if ( temp > mostCommon) {
                 mostCommon = temp;
