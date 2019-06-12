@@ -31,7 +31,7 @@ public class RotateTest {
     public void testRotateLeft_forMoreThanOne(){
         //Given
         Integer[] array = {5, 1, 8, 4, 2};
-        Integer[] expected = {4, 2, 5, 1, 8,};
+        Integer[] expected = {4, 2, 5, 1, 8};
 
         //When
         Integer[] actual = utility.rotate(array, 3);

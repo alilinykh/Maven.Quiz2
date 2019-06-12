@@ -4,6 +4,8 @@ import com.j256.ormlite.stmt.query.In;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
 
 public class ArrayUtility {
     public Integer[] merge(Integer[] array1, Integer[] array2) {
@@ -21,20 +23,17 @@ public class ArrayUtility {
     }
 
     public Integer[] rotate(Integer[] array, Integer index) {
+//
+//        for (int i = 0; i < index; i++) {
+//            for (int j = array.length - 1; j > 0; j--) {
+//                int temp = array[j];
+//                array[j] = array[j - 1];
+//                array[j - 1] = temp;
+//            }
+//        }
 
-        for (int i = 0; i < index; i++) {
-            for (int j = 0; j < array.length-1; j++) {
-                int temp;
-                temp = array[0];
-                array[i] =array[i + 1];
-                array[i] = temp;
-            }
-
-        }
-
-        return array;
+            return array;
     }
-
     public Integer countOccurrence(Integer[] array1, Integer[] array2, Integer valueToEvaluate) {
         Integer result = 0;
         Integer[] merged = merge(array1,array2);
