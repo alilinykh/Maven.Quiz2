@@ -19,8 +19,7 @@ public class ListUtility {
 
     public List<Integer> getUnique() {
         Set<Integer> result = new HashSet<>(arr);
-        List<Integer> list = new ArrayList<>(result);
-        return list ;
+        return new ArrayList<>(result);
     }
 
     public String join() {

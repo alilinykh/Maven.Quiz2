@@ -1,13 +1,13 @@
 package com.zipcodewilmington.assessment2.part2;
 
+import javafx.util.Pair;
+
 import java.security.Key;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
+import java.util.*;
 
 public class Router {
-    Map <String,String> map = new TreeMap<>();
+
+    Map <String,String> map = new LinkedHashMap<>();
 
     public void add(String path, String controller) {
         this.map.put(path,controller);
@@ -29,12 +29,14 @@ public class Router {
     public void remove(String path) {
         map.remove(path);
     }
+
     @Override
     public String toString() {
 
         String result = "";
         for (Map.Entry<String,String> entry : map.entrySet()) {
             result += entry.getKey() + entry.getValue() + "\n";
+
         }
         return result;
     }
